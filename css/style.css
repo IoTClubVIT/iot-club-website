@@ -28,19 +28,20 @@ body {
 
 
 .logo-area h1 {
-    font-size: 3.5rem;
-    font-weight: 900;
-    letter-spacing: 0.2em; /* This is the secret to the luxury look */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+     font-size: 5rem;
+    letter-spacing: 0.16em; /* Luxury wide look */
     text-transform: uppercase;
-    background: linear-gradient(to right, #fff, #94a3b8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+}      
+
 .logo-area p {
-    font-size: 0.8rem;
-    color: #888;
-    letter-spacing: 4px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.7 rem;
+    letter-spacing: 6px; /* Wide spacing for luxury look */
     text-transform: uppercase;
+    color: #888888; /* Muted gray */
 }
 /* Navigation Grid - 2x2 Layout */
 .nav-links {
@@ -51,18 +52,17 @@ body {
 }
 
 .nav-links a {
-    background: var(--glass);
-    border: 1px solid var(--border);
-    backdrop-filter: blur(12px); /* Makes it look like frosted glass */
-    color: #cbd5e1;
-    text-decoration: none;
-    padding: 14px 24px;
-    font-size: 0.7rem;
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
-    letter-spacing: 0.1em;
-    transition: all 0.4s ease;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.03); /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 12px 20px;
 }
-
 .nav-links a:hover {
     background: rgba(168, 85, 247, 0.1);
     border-color: var(--accent);
@@ -144,22 +144,23 @@ body {
 
 /* Typography refinements */
 .text-side h2 {
-    font-size: 3.5rem;
-    font-weight: 900;
-    letter-spacing: -2px; /* The "Tight" luxury look */
+    font-family: 'Inter', sans-serif;
+    font-weight: 600; /* Black weight */
+    font-size: 4rem;
+    letter-spacing: -4px; /* Extreme tight tracking */
     text-transform: uppercase;
-    background: linear-gradient(to right, #fff, #94a3b8); /* Gradient Text */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    line-height: 1.1;
+    line-height: 0.9;
+    color: #FFFFFF;
 }
 
+/* The Paragraph below XEN 4.0 */
 .text-side p {
-    font-size: 0.9rem;
-    color: #b0b0b0;
-    line-height: 2;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic; /* Serifs often look best in italic for luxury tech */
+    font-size: 1.1rem;
+    text-transform: none; /* Do not use uppercase for Playfair */
+    color: #cbd5e1;
+    line-height: 1.6;
 }
 
 /* The colorful gradient from your UI */
@@ -172,6 +173,112 @@ body {
     font-size: 3rem; /* Adjusted for longer blog titles */
     line-height: 1.1;
     margin-bottom: 15px;
+}
+/* Container Layout */
+.contribute-section {
+    padding: 80px 10%;
+    background: #0a0118;
+}
+
+.contribute-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px; /* Forces distance between text and form */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Typography Fixes */
+.contribute-text {
+    flex: 1;
+}
+
+.title-bebas {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4.5rem;
+    line-height: 0.9;
+    color: #85078a;
+    margin-bottom: 10px;
+}
+
+.desc-playfair {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+/* The Gradient Form Card */
+.contribute-card {
+    flex: 1;
+    min-width: 450px;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Input Clarity & Alignment */
+.input-box {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.input-box label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.input-box input, 
+.input-box textarea {
+    background: rgba(0, 0, 0, 0.5); /* Deep glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 14px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus, 
+.input-box textarea:focus {
+    border-color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* The Button */
+.action-btn {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.4s;
+    margin-top: 10px;
+}
+
+.action-btn:hover {
+    background: #a855f7; /* Club Purple */
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(168, 85, 247, 0.3);
 }
 
 #blog-page .text-side p {

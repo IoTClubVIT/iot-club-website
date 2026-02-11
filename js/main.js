@@ -12,6 +12,25 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
+function postBlog() {
+    const title = document.getElementById('new-title').value;
+    const content = document.getElementById('new-content').value;
+    const key = document.getElementById('admin-key').value;
+
+    if (title === "" || content === "") {
+        alert("Please fill in the blog details first.");
+        return;
+    }
+
+    // Your secret admin key
+    if (key === "IOT_ADMIN_2026") {
+        alert("SUCCESS: Blog verified and posted!");
+        // Here you can add logic to clear the form or send data
+    } else {
+        alert("ACCESS DENIED: Incorrect Security Key.");
+    }
+}
+
 document.querySelectorAll('.info-block').forEach(section => {
     section.style.opacity = 0;
     section.style.transform = 'translateY(30px)';

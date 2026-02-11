@@ -60,7 +60,42 @@
                 <img src="xen.jpeg" style="width:100%; height:100%; object-fit:cover; border-radius:6px;">
             </div>
         </section>
-    </main>
+
+    <section class="contribute-section">
+        <div class="contribute-grid">
+            
+            <div class="contribute-text">
+                <h2 class="title-bebas">CONTRIBUTE</h2>
+                <p class="desc-playfair">
+                    Have a project or event recap to share? Fill in the details below. 
+                    (Posts require a Lead Admin Key to publish.)
+                </p>
+            </div>
+
+            <div class="contribute-card gradient-box">
+                <div class="form-wrapper">
+                    <div class="input-box">
+                        <label>BLOG TITLE</label>
+                        <input type="text" id="new-title" placeholder="latest IoT tech ...">
+                    </div>
+                    
+                    <div class="input-box">
+                        <label>YOUR CONTENT</label>
+                        <textarea id="new-content" rows="4" placeholder="SHARE YOUR INSIGHTS..."></textarea>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label>ADMIN SECURITY KEY</label>
+                        <input type="password" id="admin-key" placeholder="••••">
+                    </div>
+                    
+                    <button class="action-btn" onclick="postBlog()">POST BLOG ›</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+        </main>
 
     <script src="js/main.js"></script>
 </body>
