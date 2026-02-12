@@ -1416,3 +1416,209 @@ body {
     font-weight: 300;
     color: var(--text-secondary);
 }
+
+
+
+/* ========================================
+   TEAM SECTION (COMPATIBLE ADD-ON)
+======================================== */
+
+.teams-section {
+    padding: 120px 5% 80px;
+}
+
+/* MAIN TITLE */
+.neon-text {
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 900;
+    margin-bottom: 80px;
+    background: var(--gradient-cyber);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* TEAM BLOCK */
+.team-block {
+    margin-bottom: 120px;
+}
+
+/* SECTION TITLE */
+.team-block .section-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-purple);
+}
+
+/* GRIDS */
+.team-core-grid,
+.team-domain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* TEAM CARD */
+.team-card {
+    background: rgba(139, 92, 246, 0.05);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 20px;
+    padding: 35px 20px;
+    text-align: center;
+    transition: all var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-cyber);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-fast);
+}
+
+.team-card:hover::before {
+    transform: scaleX(1);
+}
+
+.team-card:hover {
+    background: rgba(139, 92, 246, 0.1);
+    border-color: var(--primary-purple);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* TEAM IMAGE */
+.team-image {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(139, 92, 246, 0.4);
+    transition: all var(--transition-fast);
+}
+
+.team-card:hover .team-image {
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEXT */
+.team-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.team-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 18px;
+}
+
+/* SOCIAL ICONS */
+.team-socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.team-socials a {
+    width: 42px;
+    height: 42px;
+    background: rgba(139, 92, 246, 0.15);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-purple);
+    font-size: 18px;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.team-socials a:hover {
+    background: var(--gradient-cyber);
+    border-color: transparent;
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* TOGGLE BUTTON */
+.team-toggle {
+    margin-top: 30px;
+    padding: 12px 35px;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 50px;
+    color: var(--primary-purple);
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.team-toggle:hover {
+    background: rgba(139, 92, 246, 0.2);
+    border-color: var(--primary-purple);
+    transform: translateY(-3px);
+}
+
+/* ARROW ROTATION (Added) */
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+    transform: rotate(180deg);
+}
+
+/* DROPDOWN */
+.team-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-medium);
+}
+
+.team-dropdown.open {
+    max-height: 5000px;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .team-core-grid,
+    .team-domain-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-block .section-title {
+        font-size: 22px;
+    }
+
+    .neon-text {
+        font-size: 32px;
+    }
+}
