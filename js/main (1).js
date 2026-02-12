@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initParallaxEffect();
     initCardTilt();
     initRippleEffect();
+    initTeamToggle();   // <-- team page addition
+
 });
 
 // ========================================
@@ -451,3 +453,35 @@ window.iotClubSite = {
     animateCounters,
     postBlog
 };
+
+// ========================================
+// TEAM DROPDOWN TOGGLE
+// ========================================
+
+function initTeamToggle() {
+
+    const toggles = document.querySelectorAll(".team-toggle");
+
+    toggles.forEach(function (toggle) {
+
+        toggle.addEventListener("click", function () {
+
+            const teamBlock = toggle.closest(".team-block");
+            if (!teamBlock) return;
+
+            const dropdown = teamBlock.querySelector(".team-dropdown");
+            if (!dropdown) return;
+
+            dropdown.classList.toggle("open");
+            toggle.classList.toggle("active");
+
+            const arrow = toggle.querySelector(".arrow");
+            if (arrow) {
+                arrow.classList.toggle("rotate");
+            }
+
+        });
+
+    });
+
+}
